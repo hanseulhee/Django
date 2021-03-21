@@ -1,6 +1,6 @@
 ## Django
 
-Django Study
+Django Study - Blog project
 
 ---
 
@@ -42,4 +42,7 @@ python manage.py startapp [앱 이름]
 만든 view와 url 연결
 
 ---
+
+### DateBase
+
 
