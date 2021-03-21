@@ -22,10 +22,10 @@ python manage.py runserver
 
 ---
 
-### MTV 패턴
+#### MTV 패턴
 
-Model (Back End) - DateBase
-Template (Front End) - 사용자가 보이는 영역 html, css등
+Model (Back End) - DateBase <br>
+Template (Front End) - 사용자가 보이는 영역 html, css등 <br>
 View (Back End) - 데이터를 처리하는 곳
 
 ### App 제작
