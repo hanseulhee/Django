@@ -8,7 +8,7 @@ Django Study
 python -m venv[가상환경 명]
 
 ##### 가상환경 실행
-mac - source[가상환경 명]/bin/activate
+mac - source[가상환경 명]/bin/activate <br>
 window - source[가상환경 명]/Scripts/activate
 
 ##### 장고 설치
