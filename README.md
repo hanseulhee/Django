@@ -45,7 +45,8 @@ python manage.py startapp [앱 이름]
 
 ### DateBase
 
-makemigrations : 앱 내의 migration 폴더를 만들어서 models.py의 변경사항 저장
+makemigrations 
+: 앱 내의 migration 폴더를 만들어서 models.py의 변경사항을 저장
 
 migrate : migration 폴더를 실행시켜 데이터베이스에 적용
 
@@ -55,11 +56,11 @@ migrate : migration 폴더를 실행시켜 데이터베이스에 적용
 
 #### GET vs POST
 
-get은 데이터를 얻기 위한 요청
+get은 데이터를 얻기 위한 요청 <br>
 데이터가 url에 보임 ..
 <br>
 
-post는 데이터를 생성하기 위한 요청
+post는 데이터를 생성하기 위한 요청 <br>
 데이터가 url에 보이지 않고 csrf 공격을 방지함
 
 #### Update
