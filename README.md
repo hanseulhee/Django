@@ -71,7 +71,7 @@ post는 데이터를 생성하기 위한 요청 <br>
 
 ---
 
-#### Templete 상속
+### Templete 상속
 
 
 
