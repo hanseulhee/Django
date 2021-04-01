@@ -7,3 +7,4 @@ def main(request):
 def hello(request):
     userName = request.GET['name']
     return render(request, "hello.html",{'userName':userName})
+

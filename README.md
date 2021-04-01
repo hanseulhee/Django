@@ -45,4 +45,35 @@ python manage.py startapp [앱 이름]
 
 ### DateBase
 
+makemigrations : 앱 내의 migration 폴더를 만들어서 models.py의 변경사항 저장
+
+migrate : migration 폴더를 실행시켜 데이터베이스에 적용
+
+→ model에 변경사항이 있을 경우 makemigrations > migrate
+
+### CRUD
+
+#### GET vs POST
+
+get은 데이터를 얻기 위한 요청
+데이터가 url에 보임 ..
+<br>
+
+post는 데이터를 생성하기 위한 요청
+데이터가 url에 보이지 않고 csrf 공격을 방지함
+
+#### Update
+
+수정할 데이터의 id 값을 받아야함
+
+수정해야 할 데이터를 데이터베이스에 불러서 다시 덮어씌워야 한다고 생각하면 됨
+
+---
+
+#### Templete 상속
+
+
+
+
+
 
