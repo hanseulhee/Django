@@ -5,19 +5,24 @@ Django Study - Blog project
 ---
 
 #### 가상환경 생성
+
 python -m venv [가상환경 명]
 
 #### 가상환경 실행
+
 mac - source [가상환경 명]/bin/activate <br>
 window - source [가상환경 명]/Scripts/activate
 
 #### 장고 설치
+
 pip install django
 
 #### 장고 프로젝트 생성
+
 django-admin startproject [프로젝트 명]
 
 #### 서버 실행 (프로젝트로 들어온 뒤)
+
 python manage.py runserver
 
 ---
@@ -31,21 +36,24 @@ View (Back End) - 데이터를 처리하는 곳
 ### App 제작
 
 #### App 생성
+
 python manage.py startapp [앱 이름]
 
 프로젝트폴더 > setting.py > INSTALLED_APPS에 앱의 이름.apps.apps.py의 class명 추가
 
 #### Template 제작
+
 앱폴더 > 템플릿 폴더생성 > html 생성
 
 #### View 제작, URL연결
+
 만든 view와 url 연결
 
 ---
 
 ### DateBase
 
-makemigrations 
+makemigrations
 : 앱 내의 migration 폴더를 만들어서 models.py의 변경사항을 저장
 
 migrate : migration 폴더를 실행시켜 데이터베이스에 적용
@@ -73,26 +81,53 @@ post는 데이터를 생성하기 위한 요청 <br>
 
 ### Templete 상속
 
+{% extends 'base.html' %}
+{% block content %}
+{% endblock %}
+
+### urls.py 관리
+
+project폴더에 있는 urls.py의 코드길이는 간결해지고 app별로 urls.py를 관리할 수 있어서 프로젝트 시 좋음
 
 ---
 
+#### 장고에서 다루는 파일
+
+- <b> 정적 파일 </b>
+  : 미리 서버에 저장되어 있는 파일, 서버에 저장된 그대로를 서비스해주는 파일
+
+      * Static : 개발자가 서버를 개발할 때 미리 넣어놓은 정적파일 (img, js, css)
+
+
+      * media : 사용자가 업로드 할 수 있는 파일
+
+- <b>동적 파일</b>
+  : 서버의 데이터들이 어느정도 가공된 다음 보여지는 파일
+
+
 ### Static
 
-##### 장고에서 다루는 파일
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'blog', 'static')] # 현재 static파일들이 어디에 있는지 경로를 적어줌
 
-* 정적 파일
-: 미리 서버에 저장되어 있는 파일, 서버에 저장된 그대로를 서비스해주는 파일
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static') # static 파일을 어디에 모을것인지
 
+### Media
 
-    * Static : 개발자가 서버를 개발할 때 미리 넣어놓은 정적파일 (img, js, css)
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # 이용자가 업로드 한 파일을 모으는 곳
 
-
-    * media : 사용자가 업로드 할 수 있는 파일
-
-* 동적 파일
-: 서버의 데이터들이 어느정도 가공된다음 보여지는 파일
+    MEDIA_URL = '/media/' # media파일의 url를 설정함
 
 
+
+### Form
+
+<b>forms.py</b> 를 통해 데이터베이스 모델이 변할 때마다 복잡하게 바꿀 필요가 없음 
+
+유효성 검사를 편하게 사용 가능
+
+
+### User 확장과 인증
 
 
 
