@@ -67,11 +67,11 @@ python manage.py createsuperuser
 
 #### GET vs POST
 
-<b>get</b>은 데이터를 얻기 위한 요청 <br>
+get은 데이터를 얻기 위한 요청 <br>
 데이터가 url에 보임 ..
 <br>
 
-<b>post<b/>는 데이터를 생성하기 위한 요청 <br>
+post는 데이터를 생성하기 위한 요청 <br>
 데이터가 url에 보이지 않고 csrf 공격을 방지함
 
 → 데이터 생성 기능으로 가능한 무조건 post를 써야함
