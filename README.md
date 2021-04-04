@@ -58,18 +58,28 @@ makemigrations
 
 migrate : migration 폴더를 실행시켜 데이터베이스에 적용
 
-→ model에 변경사항이 있을 경우 makemigrations > migrate
+→ model에 변경사항이 있을 경우 <b>makemigrations > migrate </b>
+
+#### 슈퍼 유저 생성
+python manage.py createsuperuser
 
 ### CRUD
 
 #### GET vs POST
 
-get은 데이터를 얻기 위한 요청 <br>
+<b>get</b>은 데이터를 얻기 위한 요청 <br>
 데이터가 url에 보임 ..
 <br>
 
-post는 데이터를 생성하기 위한 요청 <br>
+<b>post<b/>는 데이터를 생성하기 위한 요청 <br>
 데이터가 url에 보이지 않고 csrf 공격을 방지함
+
+→ 데이터 생성 기능으로 가능한 무조건 post를 써야함
+
+    <form action="" method="POST">
+        {% csrf_token %} 
+        # 서버에서 인지해 공격을 방지할 수 있음
+    </form>
 
 #### Update
 
