@@ -75,12 +75,12 @@ post는 데이터를 생성하기 위한 요청 <br>
 데이터가 url에 보이지 않고 csrf 공격을 방지함
 
 → 데이터 생성 기능으로 가능한 무조건 post를 써야함
-
+```python
     <form action="" method="POST">
         {% csrf_token %} 
         # 서버에서 인지해 공격을 방지할 수 있음
     </form>
-
+```
 #### Update
 
 수정할 데이터의 id 값을 받아야함
@@ -90,11 +90,11 @@ post는 데이터를 생성하기 위한 요청 <br>
 ---
 
 ### Templete 상속
-
+```python
 {% extends 'base.html' %}
 {% block content %}
 {% endblock %}
-
+```
 ### urls.py 관리
 
 project폴더에 있는 urls.py의 코드길이는 간결해지고 app별로 urls.py를 관리할 수 있어서 프로젝트 시 좋음
@@ -116,18 +116,19 @@ project폴더에 있는 urls.py의 코드길이는 간결해지고 app별로 url
 
 
 ### Static
-
+```python
     STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'blog', 'static')] # 현재 static파일들이 어디에 있는지 경로를 적어줌
 
     STATIC_ROOT = os.path.join(BASE_DIR, 'static') # static 파일을 어디에 모을것인지
+```
 
 ### Media
-
+```python
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # 이용자가 업로드 한 파일을 모으는 곳
 
     MEDIA_URL = '/media/' # media파일의 url를 설정함
-
+```
 
 
 ### Form
