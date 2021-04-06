@@ -130,7 +130,7 @@ project폴더에 있는 urls.py의 코드길이는 간결해지고 app별로 url
     MEDIA_URL = '/media/' # media파일의 url를 설정함
 ```
 
-project내의 urls.py
+#### project내의 urls.py
 
 ```python
 rom django.conf import settings
