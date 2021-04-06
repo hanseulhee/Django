@@ -130,6 +130,19 @@ project폴더에 있는 urls.py의 코드길이는 간결해지고 app별로 url
     MEDIA_URL = '/media/' # media파일의 url를 설정함
 ```
 
+project내의 urls.py
+
+```python
+rom django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home, name="home"),
+    path('blog/', include('blog.urls')),
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+```
+---
 
 ### Form
 
