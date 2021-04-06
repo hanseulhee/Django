@@ -142,6 +142,24 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 ```
+
+#### models.py
+
+```python
+class Blog(models.Model):
+    title = models.CharField(max_length=200)
+    writer = models.CharField(max_length=100)
+    pub_date = models.DateTimeField()
+    body = models.TextField()
+    image = models.ImageField(upload_to = "blog/", blank = True, null= True)
+```
+
+
+폴더에서 앱 폴더 안 migrations에 있는 0001_initial, pycache 안에 있는 init, db.sqlit 삭제!
+꼬일 수 있으니 오류 될 만한 것들 삭제시키는 것임
+
+#### pip install pillow
+
 ---
 
 ### Form
